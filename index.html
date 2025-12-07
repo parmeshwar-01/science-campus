@@ -343,41 +343,58 @@
           </div>
 
           <div>
-            <form id="contact-form" class="card" onsubmit="return onSubmitContact(event)" action="https://docs.google.com/spreadsheets/d/14nhSziUzYrsNu8ahpZVXMgqogTV3FUebd9wgmGYh8LU/edit?gid=0#gid=0" method="post" enctype="text/plain">
+            <form id="contact-form" class="card" action="https://api.web3forms.com/submit" method="POST">
+
+              <!-- Web3Forms Access Key -->
+              <input type="hidden" name="access_key" value="1bd6023e-651a-4803-ab0f-61773b5146f7">
+
+              <!-- Full Name -->
               <div>
                 <label class="small">Full name</label>
-                <input type="text" id="name" placeholder="Enter Your Full Name" required />
-              </div>
-              <div>
-                <label class="small">Contact number</label>
-                <input type="tel" id="phone" placeholder="Enter Your Phone Number" required pattern="[0-9+\s-]{6,20}" />
-              </div>
-              <div>
-                <label class="small">Email</label>
-                <input type="email" id="email" placeholder="Enter Your Email" required />
-              </div>
-              <div>
-                <label class="small">Interested course</label>
-                <select id="course">
-                  <option>Class 11 (Science)</option>
-                  <option>Class 12 (Science)</option>
-                  <option>JEE</option>
-                  <option>NEET</option>
-                  <option>Olympiads / Competitive</option>
-                </select>
-              </div>
-              <div>
-                <label class="small">Message</label>
-                <textarea id="message" rows="4" placeholder="Any questions?"></textarea>
-              </div>
-              
-              <div style="display:flex; gap:10px; align-items:center; justify-content:space-between">
-                <button class="btn btn-primary" type="submit">Send enquiry</button>
-                <div id="contact-status" class="small muted" aria-live="polite"></div>
+                <input type="text" name="name" placeholder="Enter Your Full Name" required>
               </div>
 
-              <div class="small muted" style="margin-top:8px">Note: Our team will contact you within 48 hours after you submit the form.</div>
-            </form>
+              <!-- Phone -->
+              <div>
+                <label class="small">Contact number</label>
+                <input type="tel" name="phone" placeholder="Enter Your Phone Number" required pattern="[0-9+\s-]{6,20}">
+              </div>
+
+              <!-- Email -->
+              <div>
+                <label class="small">Email</label>
+                <input type="email" name="email" placeholder="Enter Your Email" required>
+              </div>
+
+              <!-- Course -->
+  <div>
+    <label class="small">Interested course</label>
+    <select name="course">
+      <option>Class 11 (Science)</option>
+      <option>Class 12 (Science)</option>
+      <option>JEE</option>
+      <option>NEET</option>
+      <option>Olympiads / Competitive</option>
+    </select>
+  </div>
+
+  <!-- Message -->
+  <div>
+    <label class="small">Message</label>
+    <textarea name="message" rows="4" placeholder="Any questions?"></textarea>
+  </div>
+
+  <div style="display:flex; gap:10px; align-items:center; justify-content:space-between">
+    <button class="btn btn-primary" type="submit">Send enquiry</button>
+    <div id="contact-status" class="small muted" aria-live="polite"></div>
+  </div>
+
+  <div class="small muted" style="margin-top:8px">
+    Note: Our team will contact you within 48 hours after you submit the form.
+  </div>
+
+</form>
+
           </div>
         </div>
       </section>
@@ -505,6 +522,7 @@
   </script>
 </body>
 </html>
+
 
 
 
